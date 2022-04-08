@@ -1,3 +1,5 @@
+// Java code to take 3 integer as an input and printing out the same integers
+
 import java.io.*;
 import java.util.*;
 
