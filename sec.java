@@ -1,3 +1,5 @@
+//It is the first code to take in the string as input and giving output of the same, name sec is unnecessary which can be ignored
+
 package com.company;
 
 import java.io.*;
