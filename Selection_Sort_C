@@ -1,0 +1,52 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+void swap(int *x,int *y){
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+void printArray(int A[],int n){
+    for(int i=0;i<n;i++){
+        printf("%d ",A[i]);
+    }
+}
+
+void Selection_Sort(int A[],int n){
+    int min,pos;
+    for(int i=0;i<n;i++){
+        min = i;
+        for(int j=i+1;j<n;j++){
+            if(A[j]<A[min]){
+                min = j;
+            }
+        }
+        if(min != i){
+            swap(&A[min],&A[i]);
+        }
+    }
+}
+
+int main()
+{
+    int n,A[15];
+    printf("n=");
+    scanf("%d",&n);
+    printf("Elements:");
+    for(int i=0;i<n;i++){
+        scanf("%d",&A[i]);       
+    }
+    Selection_Sort(A,n);
+    printf("Sorting is being done:");
+    printArray(A,n);
+    return 0;
+}
+
